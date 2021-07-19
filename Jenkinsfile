@@ -47,7 +47,7 @@ pipeline{
                         clusterName: "marriot-demo",
                         zone: "asia-south1-a",
                         manifestPattern: 'k8s/',
-                        credentialsId: "k8s-jenkins",
+                        credentialsId: "sreelalvu",
                         verifyDeployments: false])
             }
         }
