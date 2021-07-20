@@ -39,18 +39,18 @@ pipeline{
         //     sh "docker rmi my-image:${IMAGE_TAG}"
         // }
         // }
-        stage('Deploy Production') {
-            steps{
-                git url: 'https://github.com/sreelalvu/jenkins-multibranching'
-                step([$class: 'KubernetesEngineBuilder', 
-                        projectId: "abstract-stream-316904",
-                        clusterName: "marriot-demo",
-                        zone: "asia-south1-a",
-                        manifestPattern: 'k8s/',
-                        credentialsId: "sreelalvu",
-                        verifyDeployments: false])
-            }
-        }
+        //stage('Deploy Production') {
+        //    steps{
+        //        git url: 'https://github.com/sreelalvu/jenkins-multibranching'
+        //        step([$class: 'KubernetesEngineBuilder', 
+        //                projectId: "abstract-stream-316904",
+        //                clusterName: "marriot-demo",
+        //                zone: "asia-south1-a",
+        //                manifestPattern: 'k8s/',
+        //                credentialsId: "sreelalvu",
+        //                verifyDeployments: false])
+        //    }
+        //}
         stage('cat README') {
             when {
                 branch "multi1"
