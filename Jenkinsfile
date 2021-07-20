@@ -51,8 +51,6 @@ pipeline{
                         verifyDeployments: false])
             }
         }
-        
-    }
         stage('cat README') {
             when {
                 branch "multi1"
@@ -63,4 +61,6 @@ pipeline{
               '''
             }
         
-}       
+   }
+}
+}
