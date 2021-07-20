@@ -16,7 +16,7 @@ pipeline{
               sh 'cat README.md'
             }
         
-   }
+        }
 
         stage('git scm') {
             steps {
@@ -62,6 +62,6 @@ pipeline{
             }
         }
 
+ }
 }
-}
-}
+
