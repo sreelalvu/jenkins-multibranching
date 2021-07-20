@@ -7,6 +7,16 @@ pipeline{
     }
 
     stages {
+        
+        stage('README') {
+            when {
+                branch "multi1"
+            }
+            steps {
+              sh 'cat README.md'
+            }
+        
+   }
 
         stage('git scm') {
             steps {
@@ -51,14 +61,6 @@ pipeline{
                         verifyDeployments: false])
             }
         }
-        stage('README') {
-            when {
-                branch "multi1"
-            }
-            steps {
-              sh 'cat README.md'
-            }
-        
-   }
+
 }
 }
