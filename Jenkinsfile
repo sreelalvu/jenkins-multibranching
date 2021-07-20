@@ -55,10 +55,10 @@ pipeline{
             when {
                 branch "multi1"
             }
-            step {
-                sh '''
-                  cat README.md
-               '''
+            steps {
+              sh '''
+                cat README.md
+              '''
             }
         }
     }
