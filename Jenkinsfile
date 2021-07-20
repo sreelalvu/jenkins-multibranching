@@ -51,14 +51,12 @@ pipeline{
                         verifyDeployments: false])
             }
         }
-        stage('cat README') {
+        stage('README') {
             when {
                 branch "multi1"
             }
             steps {
-              sh '''
-                cat README.md
-              '''
+              sh 'cat README.md'
             }
         
    }
