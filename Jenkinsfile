@@ -36,14 +36,14 @@ pipeline{
             }
         }
 
-        stage('Push Image') {
-            steps {
-                withDockerRegistry([ credentialsId: "gcr:abstract-stream-316904", url: "https://asia.gcr.io/abstract-stream-316904" ]) {
-                sh 'docker tag my-image:${IMAGE_TAG} ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG}'
-                sh 'docker push ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG}'
-                }
-                }
-            }
+        //stage('Push Image') {
+        //    steps {
+        //        withDockerRegistry([ credentialsId: "gcr:abstract-stream-316904", url: "https://asia.gcr.io/abstract-stream-316904" ]) {
+        //        sh 'docker tag my-image:${IMAGE_TAG} ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG}'
+        //        sh 'docker push ${IMAGE_REPO}/${IMAGE_NAME}:${IMAGE_TAG}'
+        //        }
+        //        }
+        //    }
         // stage('Remove Unused docker image') {
         // steps{
         //     sh "docker rmi my-image:${IMAGE_TAG}"
