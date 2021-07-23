@@ -6,17 +6,17 @@ pipeline{
         IMAGE_TAG = 'jenkins'
     }
 
-    stages {
+    //stages {
         
-        stage('README') {
-            when {
-                branch "multi1"
-            }
-            steps {
-              sh 'cat README.md'
-            }
-        
-        }
+    //    stage('README') {
+    //        when {
+    //            branch "multi1"
+    //        }
+    //        steps {
+    //          sh 'cat README.md'
+    //        }
+    //    
+    //    }
 
         stage('git scm') {
             steps {
