@@ -6,7 +6,7 @@ pipeline{
         IMAGE_TAG = 'jenkins'
     }
 
-    //stages {
+    stages {
         
     //    stage('README') {
     //        when {
